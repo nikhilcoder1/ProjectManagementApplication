@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { login, logoutUser, refreshAccessToken, registerUser, verifyEmail } from "../controllers/auth.controllers.js";
+import { getcurrentUser, login, logoutUser, refreshAccessToken, registerUser, verifyEmail } from "../controllers/auth.controllers.js";
 import { validate } from "../middlewares/validator.middleware.js";
 import { userForgotPasswordValidator, userLoginValidator, userRegisterValidator, userResetForgotPasswordValidator } from "../validators/index.js";
 import {verifyJWT} from "../middlewares/auth.middleware.js";
@@ -21,5 +21,7 @@ router.route("/reset-password/:resetToken").post(userResetForgotPasswordValidato
 
 // Secured route
 router.route("/logout").post(verifyJWT , logoutUser);
+
+router.route("/current-user").post(verifyJWT , getcurrentUser);
 
 export default router;
