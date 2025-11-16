@@ -74,10 +74,10 @@ POST	              /api/v1/auth/login	                              Login and ge
 POST	              /api/v1/auth/logout	                                      Logout user
 GET	                /api/v1/healthcheck	                                    Verify server status
 POST	                /api/v1/projects	                                     Create a new project
-GET	              /api/v1/projects/:id	                                     Fetch project details
+GET	                /api/v1/projects/:id	                                     Fetch project details
 POST	              /api/v1/tasks	                                    Create a task under project
-PATCH	          /api/v1/tasks/:id	                                          Update task
-DELETE	          /api/v1/tasks/:id	                                        Delete task
+PATCH	              /api/v1/tasks/:id	                                          Update task
+DELETE	            /api/v1/tasks/:id	                                        Delete task
 
 (Note: Include all other routes as per your controllers.)
 
