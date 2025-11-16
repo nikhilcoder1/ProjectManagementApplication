@@ -57,8 +57,7 @@ src/
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/nikhilcoder1/21-building-complete-backend.git
-cd 21-building-complete-backend
+git clone https://github.com/nikhilcoder1/ProjectManagementApplication.git
 ```
 
 ### 2️⃣ Install dependencies
