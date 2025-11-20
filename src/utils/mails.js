@@ -43,7 +43,7 @@ const emailVerificationMailgenContent = (username, verificationUrl) => {
     return {
         body: {
             name: username,
-            intro: "Welcome! We're excited to have you on board.",
+            intro: "Welcome! We're excited to have you onboard.",
             action: {
                 instructions: "To get started with your account, please click the button below to verify your email address:",
                 button: {
