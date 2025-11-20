@@ -60,7 +60,7 @@ const registerUser = asyncHandler(async (req, res) => {
         )
     });
 
-    const createdUser = await User.findById(user.id).select("-password -refreshToken -refreshToken -emailVerificationToken -emailVerificationExpiry");
+    const createdUser = await User.findById(user._id).select("-password -refreshToken -refreshToken -emailVerificationToken -emailVerificationExpiry");
 
     if(!createdUser){
         throw new ApiError(500, "User creation failed", []);
