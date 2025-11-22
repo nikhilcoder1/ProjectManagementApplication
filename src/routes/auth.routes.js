@@ -8,7 +8,7 @@ import { forgotPasswordRequest, resetForgotPassword,resendEmailVerification} fro
 
 const router = Router();
 
-// Public routes(unsecured)
+// Public routes(unsecured) : donot require JWT
 router.route("/register").post(userRegisterValidator() , validate , registerUser);
 
 router.route("/login").post(userLoginValidator() , validate , login);
@@ -21,7 +21,7 @@ router.route("/forgot-password").post(userForgotPasswordValidator() , validate ,
 
 router.route("/reset-password/:resetToken").post(userResetForgotPasswordValidator() , validate , resetForgotPassword);
 
-// Secured route
+// Secured route : require JWT
 router.route("/logout").post(verifyJWT , logoutUser);
 
 router.route("/current-user").post(verifyJWT , getcurrentUser);
