@@ -30,4 +30,4 @@ router.route("/change-password").post(verifyJWT , userChangeCurrentPasswordValid
 
 router.route("/resend-email-verification").post(verifyJWT , resendEmailVerification);
 
-export default router;gi
+export default router;
